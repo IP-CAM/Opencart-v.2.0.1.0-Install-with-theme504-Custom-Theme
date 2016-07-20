@@ -24,10 +24,15 @@ $moeda_da_loja = 'R$ ';
 $tipo_de_calculo = 0;
 $parcela_minima = 5.00;
 
-if (!$product['special']) {
-  $preco_numero = str_replace(',','.',str_replace('.','', str_replace($moeda_da_loja,"",strip_tags($product['price']))));
+if (!isset($product['price'])) {
+	$product['price'] = $price;
+	$product['special'] = $special;
+}
+
+if (!$product['special']){
+$preco_numero = str_replace(',','.',str_replace('.','', str_replace($moeda_da_loja,"",strip_tags($product['price']))));
 } else {
-  $preco_numero = str_replace(',','.',str_replace('.','', str_replace($moeda_da_loja,"",strip_tags($product['special']))));
+$preco_numero = str_replace(',','.',str_replace('.','', str_replace($moeda_da_loja,"",strip_tags($product['special']))));
 }
 
 // Calcula o valor da parcela de acordo com o tipo de calculo utilizado

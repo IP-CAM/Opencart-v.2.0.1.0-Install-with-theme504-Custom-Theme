@@ -103,6 +103,7 @@
 						<?php } ?>
 					</div>
 
+
 					<?php if ($price) { ?>
 					<div class="price-section">
 						<span	class="price-new"><?php echo $special; ?></span>
@@ -111,7 +112,7 @@
 						<?php } else { ?>
 						<span	class="price-old"><?php echo $price; ?></span></li>
 						<?php } ?>
-						<? include $_SERVER['DOCUMENT_ROOT'] . '/catalog/view/theme/theme504/parcelamento.php'; ?>
+						<?php include $_SERVER['DOCUMENT_ROOT'] . '/catalog/view/theme/theme504/parcelamento.php'; ?>
 						<?php if ($tax) { ?>
 						<span class="tax"><?php echo $text_tax; ?> <?php echo $tax; ?></span>
 						<?php } ?>
