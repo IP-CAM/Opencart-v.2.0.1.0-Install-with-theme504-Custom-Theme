@@ -9,7 +9,7 @@
 	<div class="row">
 	<?php echo $column_left; ?>
 
-	<?php 
+	<?php
 	if ($column_left && $column_right) {
 		$content_width = 'col-sm-6';
 		$content_left  = 'col-sm-6';
@@ -26,16 +26,16 @@
 
 	<div id="content" class="<?php echo $content_width; ?> product_page"><?php echo $content_top; ?>
 		<div class="row product-content-columns">
-			
+
 			<!-- Content left -->
-			<div class="<?php echo $content_left; ?> product_page-left">				
+			<div class="<?php echo $content_left; ?> product_page-left">
 				<!-- product image -->
 				<div id="default_gallery" class="product-gallery">
 					<?php if ($thumb || $images) { ?>
 							<?php if ($images|| $thumb) { ?>
-							<div class="image-thumb"> 
-								<ul id="image-additional"> 
-								
+							<div class="image-thumb">
+								<ul id="image-additional">
+
 									<?php if (!empty($thumb)) { ?>
 									<li>
 										<a href="#" data-image="<?php echo $thumb; ?>" data-zoom-image="<?php echo $popup; ?>">
@@ -48,20 +48,20 @@
 										<a href="#" data-image="<?php echo $image['popup']; ?>" data-zoom-image="<?php echo $image['popup']; ?>"> <img src="<?php echo $image['thumb']; ?>" alt="" /> </a>
 									</li>
 									<?php } ?>
-								
+
 								</ul>
 							</div>
 							<?php } ?>
 							<?php if ($thumb) { ?>
 								<div class="image">
-									<img id="gallery_zoom" src="<?php echo $thumb; ?>" data-zoom-image="<?php echo $popup; ?>" alt="" /> 
+									<img id="gallery_zoom" src="<?php echo $thumb; ?>" data-zoom-image="<?php echo $popup; ?>" alt="" />
 								</div>
 							<?php } ?>
 					<?php } ?>
 				</div>
-		
-				
-		
+
+
+
 				<?php $i=0; if ($thumb || $images) { $i++?>
 				<script type="text/javascript">
 					jQuery(document).ready(function(){
@@ -74,9 +74,9 @@
 						<?php foreach ($images as $image) { ?>
 						<li><a href="<?php echo $image['popup']; ?>" data-something="something<?php echo $i?>" data-another-thing="anotherthing<?php echo $i?>"><img src="<?php echo $image['popup']; ?>" alt="<?php echo $heading_title; ?>" /></a></li>
 							<?php } ?>
-					</ul>			
+					</ul>
 				</div>
-				<?php } ?>				
+				<?php } ?>
 			</div>
 
 			<!-- Content right -->
@@ -84,7 +84,7 @@
 				<div class="general_info product-info">
 
 					<h1 class="product-title"><?php echo $heading_title; ?></h1>
-					
+
 					<!-- Prodyuct rating status -->
 					<div class="rating-section product-rating-status">
 						<?php if ($review_status) { ?>
@@ -111,6 +111,7 @@
 						<?php } else { ?>
 						<span	class="price-old"><?php echo $price; ?></span></li>
 						<?php } ?>
+						<? include $_SERVER['DOCUMENT_ROOT'] . '/catalog/view/theme/theme504/parcelamento.php'; ?>
 						<?php if ($tax) { ?>
 						<span class="tax"><?php echo $text_tax; ?> <?php echo $tax; ?></span>
 						<?php } ?>
@@ -138,7 +139,7 @@
 						<li><?php echo $text_stock; ?> <span><?php echo $stock; ?></span></li>
 					</ul>
 				</div>
-				
+
 				<div id="product">
 
 					<!-- Product options -->
@@ -292,7 +293,7 @@
 							</div>
 						<?php } ?>
 					</div>
-				
+
 					<!-- Add to cart form -->
 					<div class="form-group form-horizontal">
 						<div class="form-group">
@@ -301,7 +302,7 @@
 								<input type="text" name="quantity" value="<?php echo $minimum; ?>" size="2" id="input-quantity" class="form-control" />
 							</div>
 						</div>
-						
+
 						<input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
 						<button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-add"><?php echo $button_cart; ?></button>
 					</div>
@@ -309,7 +310,7 @@
 					<ul class="product-buttons">
 						<li><button class="btn btn-icon" onclick="wishlist.add('<?php echo $product_id; ?>');"><i class="fa fa-heart"></i> <span class="hidden-xs hidden-sm"><?php echo $button_wishlist; ?></span></button></li>
 						<li><button type="button" class="btn btn-icon" onclick="compare.add('<?php echo $product_id; ?>');"><i class="fa fa-exchange"></i> <span class="hidden-xs hidden-sm"><?php echo $button_compare; ?></span></button></li>
-					</ul>					
+					</ul>
 
 					<?php if ($tags) { ?>
 					<!-- Product tags -->
@@ -327,8 +328,8 @@
 					<div class="product-share">
 						<!-- AddThis Button BEGIN -->
 						<div class="addthis_toolbox addthis_default_style"><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a></div>
-						<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515eeaf54693130e"></script> 
-					<!-- AddThis Button END --> 
+						<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515eeaf54693130e"></script>
+					<!-- AddThis Button END -->
 					</div>
 
 					<?php if ($minimum > 1) { ?>
@@ -338,7 +339,7 @@
 
 			</div>
 		</div>
-		
+
 		<!-- Product description -->
 		<div id="tab-description" class="product-desc product-section">
 			<h3 class="product-section_title"><?php echo $tab_description; ?></h3>
@@ -371,14 +372,14 @@
 		<?php } ?>
 
 		<!-- Product reviews -->
-		<?php if ($review_status) { ?>			
+		<?php if ($review_status) { ?>
 		<div id="tab-review" class="product-reviews product-section">
 			<h3 class="product-section_title"><?php echo $tab_review; ?></h3>
 			<form class="form-horizontal">
-				
+
 				<!-- Reviews list -->
 				<div id="review"></div>
-				
+
 				<!-- Review form -->
 				<div class="review-form-title">
 					<h3 class="product-section_title" id="reviews_form_title"><?php echo $text_write; ?></h3>
@@ -393,7 +394,7 @@
 						</div>
 						<div class="form-group required">
 							<label class="control-label col-sm-3" for="input-review"><?php echo $entry_review; ?></label>
-							<div class="col-sm-9">						
+							<div class="col-sm-9">
 								<textarea name="text" rows="5" id="input-review" class="form-control"></textarea>
 								<div class="help-block"><?php echo $text_note; ?></div>
 							</div>
@@ -421,8 +422,8 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<div class="col-sm-9 col-sm-offset-3"> 
-								<img src="index.php?route=tool/captcha" alt="" id="captcha" /> 
+							<div class="col-sm-9 col-sm-offset-3">
+								<img src="index.php?route=tool/captcha" alt="" id="captcha" />
 								<div class="pull-right">
 									<button type="button" id="button-review" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary"><?php echo $button_continue; ?></button>
 								</div>
@@ -439,12 +440,12 @@
 		<?php } ?>
 
 		<!-- Related products -->
-		<?php if ($products) { ?>		
+		<?php if ($products) { ?>
 		<div class="related-products product-section">
 			<h3 class="product-section_title"><?php echo $text_related; ?></h3>
-			<ul class="related-slider">				
+			<ul class="related-slider">
 				<?php foreach ($products as $product) { ?>
-				
+
 				<li>
 					<div class="product-thumb transition">
 						<div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a>
@@ -452,7 +453,7 @@
 						<div class="caption">
 							<h4><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></h4>
 							<p><?php echo $product['description']; ?></p>
-							
+
 							<!-- Rating -->
 							<?php if ($product['rating']) { ?>
 							<div class="rating">
@@ -474,6 +475,7 @@
 								<?php } else { ?>
 								<span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
 								<?php } ?>
+								<?php include $_SERVER['DOCUMENT_ROOT'] . '/catalog/view/theme/theme504/parcelamento.php'; ?>
 								<?php if ($product['tax']) { ?>
 								<span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
 								<?php } ?>
@@ -541,10 +543,10 @@ function getChar(event) {
 
   if (event.which!=0 && event.charCode!=0) {
     if (event.which < 32) return null;
-    return String.fromCharCode(event.which)   
+    return String.fromCharCode(event.which)
   }
 
-  return null; 
+  return null;
 }
 	jQuery('#reviews_form_title').addClass('close-tab');
 	jQuery('#reviews_form_title').on("click", function(){
@@ -567,7 +569,7 @@ function getChar(event) {
 			},
 			success: function(json) {
 				$('.alert, .text-danger').remove();
-				
+
 				if (json['success']) {
 					$('#recurring-description').html(json['success']);
 				}
@@ -575,7 +577,7 @@ function getChar(event) {
 		});
 	});
 	//-->
-</script> 
+</script>
 
 <script type="text/javascript"><!--
 	$('#button-cart').on('click', function() {
@@ -598,7 +600,7 @@ function getChar(event) {
 					if (json['error']['option']) {
 						for (i in json['error']['option']) {
 							var element = $('#input-option' + i.replace('_', '-'));
-							
+
 							if (element.parent().hasClass('input-group')) {
 								element.parent().after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
 							} else {
@@ -606,22 +608,22 @@ function getChar(event) {
 							}
 						}
 					}
-					
+
 					if (json['error']['recurring']) {
 						$('select[name=\'recurring_id\']').after('<div class="text-danger">' + json['error']['recurring'] + '</div>');
 					}
-					
+
 					// Highlight any found errors
 					$('.text-danger').parent().addClass('has-error');
 				}
-				
+
 				if (json['success']) {
 					$('.breadcrumb').after('<div class="alert alert-success">' + json['success'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
-					
-					
-					
+
+
+
 					<!--$('html, body').animate({ scrollTop: 0 }, 'slow');-->
-					
+
 					$('#cart').load('index.php?route=common/cart/info #cart');
 					setTimeout(function() {$('.alert').fadeOut(1000)},3000)
 				}
@@ -629,7 +631,7 @@ function getChar(event) {
 		});
 	});
 	//-->
-</script> 
+</script>
 
 <script type="text/javascript"><!--
 	$('.date').datetimepicker({
@@ -647,13 +649,13 @@ function getChar(event) {
 
 	$('button[id^=\'button-upload\']').on('click', function() {
 		var node = this;
-		
+
 		$('#form-upload').remove();
-		
+
 		$('body').prepend('<form enctype="multipart/form-data" id="form-upload" style="display: none;"><input type="file" name="file" /></form>');
-		
+
 		$('#form-upload input[name=\'file\']').trigger('click');
-		
+
 		$('#form-upload input[name=\'file\']').on('change', function() {
 			$.ajax({
 				url: 'index.php?route=tool/upload',
@@ -671,14 +673,14 @@ function getChar(event) {
 				},
 				success: function(json) {
 					$('.text-danger').remove();
-					
+
 					if (json['error']) {
 						$(node).parent().find('input').after('<div class="text-danger">' + json['error'] + '</div>');
 					}
-					
+
 					if (json['success']) {
 						alert(json['success']);
-						
+
 						$(node).parent().find('input').attr('value', json['code']);
 					}
 				},
@@ -689,7 +691,7 @@ function getChar(event) {
 		});
 	});
 	//-->
-</script> 
+</script>
 
 <script type="text/javascript"><!--
 	$('#review').delegate('.pagination a', 'click', function(e) {
@@ -720,14 +722,14 @@ function getChar(event) {
 			},
 			success: function(json) {
 				$('.alert-success, .alert-danger').remove();
-				
+
 				if (json['error']) {
 					$('#review').after('<div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> ' + json['error'] + '</div>');
 				}
-				
+
 				if (json['success']) {
 					$('#review').after('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + '</div>');
-					
+
 					$('input[name=\'name\']').val('');
 					$('textarea[name=\'text\']').val('');
 					$('input[name=\'rating\']:checked').prop('checked', false);
@@ -747,7 +749,7 @@ function getChar(event) {
 		});
 	});
 	//-->
-</script> 
+</script>
 
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -763,4 +765,3 @@ function getChar(event) {
 </script>
 
 <?php echo $footer; ?>
-

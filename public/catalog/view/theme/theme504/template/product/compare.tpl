@@ -52,6 +52,7 @@
 			  <?php } else { ?>
 			  <span class="price-old"><?php echo $products[$product['product_id']]['price']; ?> </span> <span class="price-new"> <?php echo $products[$product['product_id']]['special']; ?> </span>
 			  <?php } ?>
+        <? include $_SERVER['DOCUMENT_ROOT'] . '/catalog/view/theme/theme504/parcelamento.php'; ?>
 			  <?php } ?></td>
 			<?php } ?>
 		  </tr>

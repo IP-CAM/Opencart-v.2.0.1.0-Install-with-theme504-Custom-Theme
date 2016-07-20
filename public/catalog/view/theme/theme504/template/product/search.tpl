@@ -118,8 +118,8 @@
 				</a>
 			</div>
 		</div>
-	  <div class="row"> 
-		<?php foreach ($products as $product) { ?>  
+	  <div class="row">
+		<?php foreach ($products as $product) { ?>
 		<div class="product-layout product-list col-xs-12">
 		  <div class="product-thumb">
 			<div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
@@ -133,6 +133,7 @@
 				<?php } else { ?>
 				<span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
 				<?php } ?>
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/catalog/view/theme/theme504/parcelamento.php'; ?>
 				<?php if ($product['tax']) { ?>
 				<span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
 				<?php } ?>
@@ -170,31 +171,31 @@
 	  <?php echo $content_bottom; ?></div>
 	<?php echo $column_right; ?></div>
 </div>
-<?php echo $footer; ?> 
+<?php echo $footer; ?>
 <script type="text/javascript"><!--
 $('#button-search').bind('click', function() {
 	url = 'index.php?route=product/search';
-	
+
 	var search = $('#content input[name=\'search\']').prop('value');
-	
+
 	if (search) {
 		url += '&search=' + encodeURIComponent(search);
 	}
 
 	var category_id = $('#content select[name=\'category_id\']').prop('value');
-	
+
 	if (category_id > 0) {
 		url += '&category_id=' + encodeURIComponent(category_id);
 	}
-	
+
 	var sub_category = $('#content input[name=\'sub_category\']:checked').prop('value');
-	
+
 	if (sub_category) {
 		url += '&sub_category=true';
 	}
-		
+
 	var filter_description = $('#content input[name=\'description\']:checked').prop('value');
-	
+
 	if (filter_description) {
 		url += '&description=true';
 	}

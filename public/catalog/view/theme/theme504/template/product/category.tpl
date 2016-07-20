@@ -32,12 +32,12 @@
 	  <?php } ?>
 	  <?php if ($categories) { ?>
 	  <h3><?php echo $text_refine; ?></h3>
-	  
+
 	  <div class="row">
 		<div >
 		  <ul class="box-subcat">
 			<?php $i=0; foreach ($categories as $category) { $i++; ?>
-				<?php 
+				<?php
 			   $perLine = 4;
 			   $last_line = "";
 							$total = count($products);
@@ -64,7 +64,7 @@
 		  </ul>
 		</div>
 	  </div>
-	  
+
 	  <?php } ?>
 	  <?php if ($products) { ?>
 		<div class="product-filter clearfix">
@@ -142,6 +142,7 @@
 				  <?php } else { ?>
 				  <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
 				  <?php } ?>
+          <?php include $_SERVER['DOCUMENT_ROOT'] . '/catalog/view/theme/theme504/parcelamento.php'; ?>
 				  <?php if ($product['tax']) { ?>
 				  <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
 				  <?php } ?>

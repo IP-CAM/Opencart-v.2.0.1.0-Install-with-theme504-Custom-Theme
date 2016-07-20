@@ -18,7 +18,7 @@ jQuery(document).ready(function(){
 			closeClick	: false,
 			openEffect	: 'elastic',
 			closeEffect	: 'elastic',
-			
+
 		});
 });
 </script>
@@ -48,7 +48,7 @@ jQuery(document).ready(function(){
 										<?php if ($product['model']) {?>
 											<p class="product_model model"><?php echo $text_model; ?> <?php echo $product['model']; ?></p>
 										<?php }?>
-										
+
 										<?php if ($product['price']) { ?>
 										<div class="price">
 										<?php if (!$product['special']) { ?>
@@ -56,6 +56,7 @@ jQuery(document).ready(function(){
 										<?php } else { ?>
 										<span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
 										<?php } ?>
+										<? include $_SERVER['DOCUMENT_ROOT'] . '/catalog/view/theme/theme504/parcelamento.php'; ?>
 										<?php if ($product['tax']) { ?>
 										<span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
 										<?php } ?>
@@ -77,7 +78,7 @@ jQuery(document).ready(function(){
 										<?php } ?>
 										<?php } ?>
 									</div>
-										
+
 								</div>
 								<div class="col-sm-12">
 									<div class="quickview_description description">
@@ -140,7 +141,7 @@ jQuery(document).ready(function(){
 					</div>
 					<div class="cart-button">
 						<button class="btn btn-add" type="button" onclick="cart.add('<?php echo $product['product_id']; ?>');">
-							 
+
 							<span class="hidden-xs hidden-sm hidden-md">
 								<?php echo $button_cart; ?>
 							</span>
