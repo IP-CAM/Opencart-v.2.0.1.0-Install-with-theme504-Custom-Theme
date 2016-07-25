@@ -54,7 +54,7 @@
 
   </div>
 	<div class="copyright">
-    	<div class="container" style="width: 55%; float: left; padding-bottom: 20px;">
+    	<div class="container" style="width: 55%; float: left;">
 					<?php echo $powered; ?><!-- [[%FOOTER_LINK]] -->
 				</div>
 
@@ -69,7 +69,7 @@
 						<span style="font-weight:bold; font-size:7pt">SSL</span></a>
 					</div>
 	</div>
-	</div>
+	
 </footer>
 
 
