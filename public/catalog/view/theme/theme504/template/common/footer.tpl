@@ -1,4 +1,4 @@
-<div style="width: 1000px; text-align: center; margin: auto; padding-top: 30px;">
+<div style="width: 1000px; text-align: center; margin: auto; padding-top: 30px; padding-bottom: 18px;">
 	<div style="float: left; text-transform: uppercase;">Formas de pagamento:</div><br>
 	<img src="/image/pagseguro-line.png" style="width: 100%;" width="100%">
 </div>
@@ -64,12 +64,13 @@
 						<img src="/image/pagseguro.png" alt="PagSeguro" height="26" style="border: 0px; margin-right: 20px; height: 26px;">
 					</a>
 
-					<a href="https://ssl.comodo.com" target="_blank">
-						<img src="https://ssl.comodo.com/images/comodo_secure_seal_76x26_transp.png" alt="SSL" width="76" height="26" style="border: 0px;">
-						<span style="font-weight:bold; font-size:7pt">SSL</span></a>
+					<a href="http://www.correios.com.br/" target="_blank">
+						<img src="/image/correios.png" alt="Correios"  height="26" style="border: 0px; height: 26px;">
+					</a>
+
 					</div>
 	</div>
-	
+
 </footer>
 
 
